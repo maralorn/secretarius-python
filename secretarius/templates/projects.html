@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block content %}
+<h2>Projects</h2>
+<div id="projects"></div>
+<input type="text" id="description"><a class="button" id="createproject" href="javascript:void(0)">Create Project</a><select id="asaplist"></select><a class="button" id="createasap" href="javascript:void(0)">Create ASAP</a>
+<p id="root" class="button dropbox">Root</p>
+<p id="garbage" class="button dropbox">Garbage</p>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='projects.js') }}"></script>
+{% endblock %}
+

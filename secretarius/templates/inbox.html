@@ -1,0 +1,8 @@
+{% extends "layout.html" %} {% block content %}
+<h2>Inbox</h2>
+<div id="info"></div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='inbox.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,10 @@
+<% if (this.type == 'project'){ %>
+<div class="project" id="<%= this.id %>"><input type="checkbox" value="<%= this.id %>" name="done"> 
+<p id="<%= this.id %>"><% if (this.children.length > 0){%><a id="projecttoggle<%= this.id %>" href="javascript:toggle(<%= this.id %>)">-</a><%;}%> <%= this.description %></p>
+<% if (this.children.length > 0){%><div class="children" id="project<%= this.id %>">
+<%= $.jqote(fn, this.children) %><%;%></div><%;}%>
+</div>
+<% } else { %>
+<div class="asap" id="<%= this.id %>"><a class="listlink" href="/asap/<%= this.asaplist %>"><%= this.asaplist %></a>
+<p><%= this.description %> </p>
+</div><% ;} %>

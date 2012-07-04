@@ -1,0 +1,9 @@
+{% extends "layout.html" %} {% block content %}
+<h2>ASAP: {{ name }}</h2>
+<div id="list"></div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script>$NAME="{{name}}";</script>
+<script src="{{ url_for('static', filename='asap.js') }}"></script>
+{% endblock %}

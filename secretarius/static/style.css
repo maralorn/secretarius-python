@@ -1,0 +1,121 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Baar Sophia', DejaVu, Helvetica, sans-serif;
+	font-size: 1em;
+
+	text-align:justify;
+}
+body{
+	background:#00000f;
+    color: #9999ff;
+}
+a{
+	color: #9999ff;
+	text-decoration: none;
+}
+#list table{
+	border-spacing:0;
+	border-collapse:collapse;
+	empty-cells: hide;
+}
+select{
+	background:transparent;
+	color:blue;
+	border: 0;
+}
+input, textarea{
+    background:#00000f;
+    color:#9999ff;
+    border:0px;
+    border:1px solid #9999ff;
+}
+textarea{
+	height:5em;
+	padding:0.5em;
+	width:90%;
+}
+#list table td, #list table th{
+	margin:0;
+	padding:0.2em;
+	border:1px solid blue;
+}
+
+#newnote{
+	background:#00000f;
+	padding:0.2em;
+}
+#outerheader{
+	position:fixed;
+	top:0;
+	width: 100%;
+	z-index: 10;
+}
+#innerheader{
+	padding:0.5em;
+	background: #000044;
+}
+
+#footer{
+	position: fixed;
+	bottom:0; width: 100%;
+    background: #000044;
+}
+
+#content{
+	padding: 0.5em;
+	padding-top:2em;
+	padding-bottom: 2em;
+}
+
+.smallbutton{
+	color:#00000f;
+    background:#9999ff;
+    font-size:0.8em;
+    padding: 2px;
+    opacity: 0.7;
+}
+.project,.asap{
+	border-top: 2px solid #000044;
+}
+#root, #garbage{
+	display:block;
+	padding:2em;
+	opacity:0;
+}
+.asap{
+	background:#aaaaaa;
+}
+.project{
+    background:#9999ff;
+}
+.project input{
+	float:right;
+	margin: 0.5em;
+}
+.project p,.asap p{
+	padding: 0.5em;
+	color:#000000;
+}
+.project a{
+	color:#ffffff;
+}
+.children{
+	margin-left: 1em;
+	border-left: 2px solid #000044;
+}
+.listlink{
+	float:right;
+	color:#ffffff;
+    padding: 0.5em;
+	
+}
+.button{
+	display: inline-block;
+	padding: 3px;
+	margin: 5px;
+    color:#00000f;
+    background:#9999ff;
+    border:1px;
+    border-color:#000044;	
+}

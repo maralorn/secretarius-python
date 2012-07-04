@@ -1,0 +1,14 @@
+<% if(this.result.length>0){ %>
+<table><tr><th></th><th>Name</th><th>Project</th><th>Last edited</th><th>Created</th><th>Change List</th></tr>
+<% for (var asapindex in this.result){
+    var asap = this.result[asapindex]; %><tr>
+    
+        <td><input type="checkbox" value="<%= asap.id %>" name="done"></td><td><%= asap.description %><% ; %></td>
+        <td><% if (asap.project){ %><%= asap.projectdescription %><%;}%></td>
+        <td><span class="reltime" time="<%= asap.last_edited %>"></span></td>
+        <td><span class="reltime" time="<%= asap.created_at %>"></span></td>
+        <td><select class="asaplist" id="<%= asap.id %>"><option>Choose List</option></select></td>
+    </tr>
+<%;}%>
+</table><%} else {%><a href="javascript:void(0)" id="deletelist">Delete List</a><%;}%><br />
+<input type="text" id="description"><a class="button" id="createasap" href="javascript:void(0)">Create</a>

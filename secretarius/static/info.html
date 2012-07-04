@@ -1,0 +1,23 @@
+<% if (!this.error){ %>
+<% if (this.type == 'note'){ %>
+    <h3>Note</h3>
+    <textarea id="notecontent"><%= this.content %></textarea><br>
+    <a class="button" id="changenote" href="javascript:void(0)">Change</a><%;%>
+        <% if (this.attachment != null){ %>
+        <% if (/.wav$/.test(this.attachmentname)){ %><audio controls="controls"><source src="<%= $SCRIPT_ROOT+'/file/'+this.attachment+'/'+this.attachmentname %>"/></audio><% ;}; %>
+    Attachment:<a href="<%= $SCRIPT_ROOT+'/file/'+this.attachment+'/'+this.attachmentname %>"><%= this.attachmentname %></a><a class="button" id="removeattachment" href="javascript:void(0)">Remove</a><%;}%>
+<% }; %>
+<p>Created <span class="reltime" time="<%= this.created_at %>"></span>| Last edited <span class="reltime" time="<%= this.last_edited %>"></span></p><%;%>
+<a class="button" id="deleteinfo" href="javascript:void(0)">Delete</a>
+<a class="button" id="delayinfo" href="javascript:void(0)">Delay</a>
+<a class="button" id="maybeinfo" href="javascript:void(0)">Maybe</a>
+<a class="button" id="archiveinfo" href="javascript:void(0)">Archive</a>
+<a class="button" id="createasap" href="javascript:void(0)">Asap</a>
+<a class="button" id="createproject" href="javascript:void(0)">Project</a>
+<a class="button" id="createappointment" href="javascript:void(0)">Appointment</a><br /><br />
+<input type="text" id="description"><br>
+<input disabled="disabled" type="text" id="date" value=""><a class="button" href="javascript:NewCssCal('date','ddMMyyyy','arrow',true,24,false,'future')">Choose Date</a><br>
+<select id="asaplist"></select>
+
+
+<% } else {%><p> <%= this.error %></p><%;}%>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>secretarius</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<meta name="description" content="Personal Information Manager">
+<meta name="author" content="Malte Brandy">
+</head>
+<body><div id=outerheader>
+<div id="innerheader"
+        {% block header %}
+        <h1>
+            <a href="{{ url_for('index')}}">secretarius</a>
+        </h1>
+        <a class="button" href="/later/">Later</a><a class="button" href="/inbox/">Inbox</a><a class="button" href="/projects/">Projects</a>
+        <form id="newnote" action="{{ url_for('note_create')}}" method=post enctype=multipart/form-data>
+            Note: <input type=text name=content length=80> <input type=file name=attachment><input class="button" type=submit value=Save>
+        </form>
+        <div style="display:inline;" id="links"></div><input type="text" id="newasaplist"><a class="button" id="createnewlist">New List</a>
+        {% endblock %}</div>
+        <a class="smallbutton" href="javascript:void(0)" onClick="$('#innerheader').toggle(300)">Menü</a>
+    </div>
+    
+    <!-- header -->
+    <div id=content>{% block content %}{% endblock %}</div>
+    <div id=footer>
+        {% block footer %}
+        <div id="count">There might items in your inbox. Some of them could actually be urgent. But most notably you should enable javascript.</div>
+        {% endblock %}
+    </div>
+    <!-- footer -->
+    {% block scripts %}
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.jqote2.js') }}"></script>
+    <script src="{{ url_for('static', filename='date.extensions.js') }}"></script>
+    <script src="{{ url_for('static', filename='datetimepicker_css.js') }}"></script>
+    <script src="{{ url_for('static', filename='pim.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    {% endblock %}
+</body>
+</html>
