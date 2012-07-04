@@ -1,7 +1,22 @@
 secretarius
 ===========
 
-A personal information manager, trying to provide a fully integrated cloud experience.
+Fortschritt
+-
+
+Bis jetzt ist noch nicht viel vorhanden:
+
+* Anlegen von Notes/ASAPs/Projects/Appointments
+* Inspizieren und verarbeiten der Notes in der INBOX
+* Dynamische ASAPListen, zum überblicken und erledigen von ASAPs.
+* Projekt Ansicht Baumstruktur mit Drag&Drop für Projekte und ASAPs.
+
+Mit den Layern:
+
+* postgresql Server
+* Flask/Python2 HttpServer
+* Webinterface mit jQuery und jqote Templates
+
 
 Ich bin sehr dankbar für jeden, der mir auch nur einen Tipp oder seine Meinung hierzu abgibt. Ich bin sehr offen für jede Form von Vorschlägen und natürlich auch Beteiligung. Ich kann auch gerne Featurevorschläge sammeln. Nur mir erzählen, dass die Idee komplett sinnlos ist, wird nicht klappen, dafür habe ich mich schon zusehr damit beschäftigt.
 Vermutlich sollte dieser Text in Englisch sein, um ihn besser zu veröffentlichen, aber ich bin in Deutsch besser in der Lage meine Gedanken zu fokussieren.
