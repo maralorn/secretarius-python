@@ -1,4 +1,4 @@
 secretarius
 ===========
 
-A personal information manager, trying to provide a fully integrated cload experience
+A personal information manager, trying to provide a fully integrated cloud experience.
