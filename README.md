@@ -1,6 +1,17 @@
 secretarius
 ===========
 
+Fasted way to get this running (if you know what you are doin):
+-
+(if not, ask me (malte.brandy@maralorn.de) or wait for me to provide a better installation process.)
+
+1. install dependencies (python2, Flask, psycopg2, postgresql)
+2. clone
+3. create a database "pim" for your user.
+4. use psql to execute design.sql
+5. run runserver.py
+6. access http://localhost:5000 from your browser.
+
 Fortschritt
 -
 
