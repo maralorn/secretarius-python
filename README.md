@@ -1,7 +1,7 @@
 secretarius
 ===========
 
-Fasted way to get this running (if you know what you are doin):
+Fasted way to get this running (if you know what you are doing):
 -
 (if not, ask me (malte.brandy@maralorn.de) or wait for me to provide a better installation process.)
 
