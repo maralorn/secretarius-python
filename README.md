@@ -1,9 +1,9 @@
 secretarius
 ===========
 
-Fasted way to get this running (if you know what you are doing):
+Fastest way to get this running (if you know what you are doing):
 -
-(if not, ask me (malte.brandy@maralorn.de) or wait for me to provide a better installation process.)
+(if not, ask me (malte.brandy@maralorn.de) or wait for me to provide a better installation process.(Or better yet provide a better installation process))
 
 1. install dependencies (python2, Flask, psycopg2, postgresql)
 2. clone
